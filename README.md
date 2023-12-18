@@ -15,7 +15,7 @@ Ejecuta el comando:
 
 git clone https://github.com/naynivea/ngs-ts-fe-pruebatecnica-181223.git
 
-# Instalar las Dependencias
+## Instalar las Dependencias
 
 Después de clonado el repositorio, debes instalar las dependencias necesarias.
 
