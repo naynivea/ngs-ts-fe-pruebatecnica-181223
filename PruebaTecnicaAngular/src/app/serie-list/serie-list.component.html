@@ -1,1 +1,24 @@
-<p>serie-list works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Título</th>
+      <th scope="col">Resumem</th>
+      <th scope="col">Detalles</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (serie of series; track serie.id) {
+    <tr>
+      <th scope="row">{{ serie.id }}</th>
+      <td>{{ serie.title }}</td>
+      <td>{{ serie.overview }}</td>
+      <td>
+        <a href="serie-detail/{{ serie.id }}" class="btn btn-primary"
+          >Detalles</a
+        >
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>

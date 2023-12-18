@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TmdbService } from '../the-movie-db.service';
 
 @Component({
   selector: 'app-serie-list',
-  standalone: true,
-  imports: [],
   templateUrl: './serie-list.component.html',
-  styleUrl: './serie-list.component.css'
+  styleUrls: ['./serie-list.component.css'],
 })
-export class SerieListComponent {
+export class SerieListComponent implements OnInit {
+  series: Array<any> = [];
 
+  constructor(private tmdbService: TmdbService) {}
+
+  ngOnInit() {
+    this.tmdbService.getSeries().subscribe((data) => {
+      this.series = data['results'];
+    });
+  }
 }

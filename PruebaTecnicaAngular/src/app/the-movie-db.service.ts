@@ -12,10 +12,26 @@ export class TmdbService {
   constructor(private http: HttpClient) {}
 
   public getPopularMovies(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/movie/popular?api_key=${this.apiKey}`);
+    return this.http.get(
+      `${this.baseUrl}/movie/popular?language=es-ES&api_key=${this.apiKey}`
+    );
   }
 
   public getDetailMovies(id: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`);
+    return this.http.get(
+      `${this.baseUrl}/movie/${id}?language=es-ES&api_key=${this.apiKey}`
+    );
+  }
+
+  public getSeries(): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}/tv/popular?language=es-ES&api_key=${this.apiKey}`
+    );
+  }
+
+  public getDetailSeries(id: string): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}/tv/${id}?language=es-ES&api_key=${this.apiKey}`
+    );
   }
 }

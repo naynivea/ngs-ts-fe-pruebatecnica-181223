@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
@@ -7,23 +8,32 @@ import { SerieDetailComponent } from './serie-detail/serie-detail.component';
 
 export const routes: Routes = [
   {
-    path: "",
-    component: HomeComponent
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
   },
   {
-    path: "movie-list",
-    component: MovieListComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path: "movie-detail/:id",
-    component: MovieDetailComponent
+    path: 'home',
+    component: HomeComponent,
   },
   {
-    path: "serie-list",
-    component: SerieListComponent
+    path: 'movie-list',
+    component: MovieListComponent,
   },
   {
-    path: "serie-detail",
-    component: SerieDetailComponent
+    path: 'movie-detail/:id',
+    component: MovieDetailComponent,
+  },
+  {
+    path: 'serie-list',
+    component: SerieListComponent,
+  },
+  {
+    path: 'serie-detail/:id',
+    component: SerieDetailComponent,
   },
 ];
