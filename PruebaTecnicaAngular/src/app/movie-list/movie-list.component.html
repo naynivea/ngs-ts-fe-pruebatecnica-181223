@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+   <tr>
+     <th scope="col">#</th>
+     <th scope="col">Título</th>
+     <th scope="col">Resumo</th>
+     <th scope="col">Detalhes</th>
+   </tr>
+  </thead>
+  <tbody>
+   @for (movie of movies; track movie.id) {
+     <tr>
+       <th scope="row">{{ movie.id }}</th>
+       <td>{{ movie.title }}</td>
+       <td>{{ movie.overview }}</td>
+       <td><a href="movie-detail/{{ movie.id }}" class="btn btn-primary">Detalhes</a></td>
+     </tr>
+   }
+  </tbody>
+ </table>

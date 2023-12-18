@@ -1,0 +1,11 @@
+<div class="container-fluid mt-5">
+  <div class="card shadow-sm">
+   <div class="card-body">
+     <h2 class="card-title">{{movie.title}}</h2>
+     <p class="card-text"><strong>Género: </strong>{{movie.genres[0].name}}</p>
+     <p class="card-text"><strong>Status: </strong>{{movie.status}}</p>
+     <a href="https://api.themoviedb.org/3/movie/{{movie.id}}?api_key=d15be053f4b8cd45bcf83e6f1491d25b" class="btn btn-primary">Detalhes</a>
+   </div>
+  </div>
+ </div>
+
